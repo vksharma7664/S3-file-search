@@ -9,8 +9,8 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/vksharma7664/S3-file-search.git .
-
+#RUN git clone https://github.com/vksharma7664/S3-file-search.git .
+COPY . .
 RUN pip3 install -r requirements.txt
 
 EXPOSE 8501
